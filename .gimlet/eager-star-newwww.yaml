@@ -1,0 +1,16 @@
+app: newwww
+env: eager-star
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.70.0
+values:
+  gitRepository: Leejasonjeffrey/New
+  gitSha: '{{ .SHA }}'
+  image:
+    registry: public
+    strategy: static
+    tag: "1.27"
+  resources:
+    ignoreLimits: true
